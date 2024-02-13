@@ -5,14 +5,14 @@ import SignUp from './Page/sign-up';
 import Dashboard from './Page/Dashboard';
 
 
- 
+  
 function App() {
   return (
     <>
     <Routes> 
-      <Route path="/" element={Login}/>
-      <Route path="/signup" element={SignUp}/> 
-      <Route path="/dashboard" element={Dashboard}/> 
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/> 
+      <Route path="/" element={<Dashboard/>}/> 
     </Routes>
     </>
   );
