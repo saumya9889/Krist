@@ -1,15 +1,19 @@
 import React from "react";
+import {  Routes, Route } from "react-router-dom";
 import Login from "./Page/login";
+import SignUp from './Page/sign-up';
+import Dashboard from './Page/Dashboard';
+
 
  
 function App() {
   return (
     <>
-      <Login />
-     {/* <Broser> 
-      <Routes path="/" component={login}/>
-      <Routes path="/about" component={about}/>
-     </Broser> */}
+    <Routes> 
+      <Route path="/" element={Login}/>
+      <Route path="/signup" element={SignUp}/> 
+      <Route path="/dashboard" element={Dashboard}/> 
+    </Routes>
     </>
   );
 }
