@@ -11,7 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   // const [otpSent, setOtpSent] = useState(false);
 
-  console.log(navigate, "navigate+++");
+  // console.log(navigate, "navigate+++");
 
   // for handleSubmit the login data
   const handleSubmit = (e) => {
