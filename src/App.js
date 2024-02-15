@@ -2,7 +2,9 @@ import React from "react";
 import {  Routes, Route } from "react-router-dom";
 import Login from "./Page/login";
 import SignUp from './Page/sign-up';
-import Dashboard from './Page/Dashboard';
+import HomePage from './Page/HomePage';
+
+
 
 
   
@@ -12,7 +14,7 @@ function App() {
     <Routes> 
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<SignUp/>}/> 
-      <Route path="/" element={<Dashboard/>}/> 
+      <Route path="/" element={<HomePage/>}/> 
     </Routes>
     </>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Logo from "../../assests/image/logo.png";
 import SignupImg from "../../assests/image/signup-img.png";
 
 const SignUp = () => {
@@ -41,6 +42,12 @@ const SignUp = () => {
           <div className="left-side">
             <div>
               <img src={SignupImg} className="w-full" alt="background" />
+              <img
+                src={Logo}
+                className="absolute w-[143px] h-[58px] top-[60px] left-[60px] z-10"
+                alt="logo"
+                // style={{ width: "12%", height: "40px" }}
+              />
             </div>
           </div>
           <div className="right-side flex justify-center items-center h-[40%]">

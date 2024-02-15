@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins&display=swap');
 @import "./login.scss";
 @import "./signup.scss";
+@import "../styles/Home/header.scss";
 
 * {
     margin: 0;
@@ -8,7 +9,7 @@
     box-sizing: border-box;
 }
 
-.container{
+.container-wrapper{
     margin: 0 auto;
     width: 1350px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Logimg from "../../assests/image/logimg.png";
-import Logo from "../../assests/image/logo.jpeg";
+import Logo from "../../assests/image/logo.png";
 import { useNavigate, Link } from "react-router-dom";
 // import axios from "axios";
 
@@ -146,12 +146,18 @@ const Login = () => {
                 />
               </div>
               <button
-                className=""
+              style={{
+                    cursor: "pointer",
+                    borderRadius: "10px",
+                    marginTop: "1.5rem",
+                    background: "#131118",
+                  }}
+                className="button  text-white   justify-center align-middle"
                 to="/signup"
                 onClick={handleNavigate}
                 // onClick={() => navigate("/signup")}
               >
-                Sigup
+                SignUp
               </button>
             </div>
           </div>
