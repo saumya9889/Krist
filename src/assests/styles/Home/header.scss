@@ -1,14 +1,35 @@
-*{
+* {
     margin: 0;
-    font-style: jost;
+    font-style: Satoshi;
 }
 
+.card-area{
+    position: relative;
+.search-wrapper {
+    width: 100%;
+    right: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
 
-// .content-wrapper{
-//     display: grid;
-//     justify-content: center;
-//     align-items: center;
-//     grid-template-columns: 1fr 2fr 2fr;
-//     padding: 10px;
+    // .search-container {
+        // position: relative;
+    // }
+
+    .search-input {
+        border-radius: 62px;
+        border: 1px solid #ccc;
+        height: 32px;
+        width: 162%;
+        border: black;
+        background-color: #6b6464;
+        display: block;
+        padding: 4px;
+        border: 1px solid #ccc;
+        border-radius: 28px;
     
-// }
+
+    }
+}
+}
