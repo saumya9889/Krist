@@ -2,16 +2,19 @@ import React from "react";
 import Banners from "../../assests/image/banner.png";
 import Vector from "../../assests/image/vector.png";
 import Vectors from "../../assests/image/vector-small.png";
+import  {BannerData,NewArrivalData} from "../../Mock/home-data"; 
 
-const Banner = () => {
+const Banner = () => { 
   return (
     <>
       
-        <div className="container-wrapper">
-          <div className="banner-wrapper">
+        <div className="banner-wrapper">
+          <div className="container-wrapper">
+            <div className="banner-content-wrapper flex justify-between items-center">
             <div className="left-side">
-              <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
-              <p>
+            <div className="letf-content-wrapper">
+              <h1 className="heading font-[mono] leading-[58px] text-[47px] font-extrabold">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+              <p className="para text-[14px] text-lightGrey">
                 Browse through our diverse range of meticulously crafted
                 garments, designed to bring out your individuality and cater to
                 your sense of style.
@@ -28,12 +31,14 @@ const Banner = () => {
                   30,000+<p>Happy Customers</p>
                 </span>
               </div>
+              </div>
             </div>
-
-            <div className="right-side">
-            <img  className="img" alt="banner" src={Banners} />
-            <img src={Vector} />
-            <img src={Vectors} /></div>
+            <div className="right-side relative">
+            <figure className="image-wrap w-full">
+            <img   alt="banner" src={Banners} />
+            </figure>
+            <img className="vector absolute w-[80px] top-[79px] right-[6px]" src={Vector} />
+            <img  className="vectors absolute top-[14rem] left-[4rem]" src={Vectors} /></div></div>
           </div>
         </div>
       

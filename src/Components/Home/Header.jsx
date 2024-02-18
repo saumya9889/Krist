@@ -9,9 +9,13 @@ import {
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const handleClose=()=>{
+    setIsVisible(false);
+  }
 
   const toggleSearchBar = () => {
-    setIsVisible(!isVisible);
+    // setIsVisible(!isVisible);
+    setIsVisible(true);
   };
   return (
     <>
@@ -46,12 +50,18 @@ const Header = () => {
                   <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
                 </button>
                 {isVisible && (
+                  <div className="relative">
+                    <span className="absolute right-[317px] text-black z-10"> <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" /></span>
+                  
                   <input
-                    className="search-input"
+                    className="search-input absolute top-[0] right-[2.5rem] w-[300px]"
                     type="text"
                     placeholder="Search For Products"
                   />
+                  <button  onClick={handleClose} className="search-close absolute left-[2px] text-black">X</button>
+                  </div>
                 )}
+                
               </div>
               <div>
                 <FontAwesomeIcon icon={faShoppingCart} />

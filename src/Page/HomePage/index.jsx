@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../Components/Home/Header';
 import Banner from '../../Components/Home/Banner';
 import CompanyBar from '../../Components/Home/CompanyBar';
-import NewArrival from '../../Components/Common/NewArrival';
+import NewArrival from '../../Components/Home/NewArrival';
 
 
 const HomePage = () => {

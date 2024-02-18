@@ -7,8 +7,8 @@ import Calvein from "../../assests/image/calvein.png";
 
 const CompanyBar = () => {
   return (
-    <div className="container-wrapper">
-      <div className="company-wrapper">
+    <div className="company-wrapper">
+      <div className="container-wrapper">
       <div className="img-container ">
         <img  src={Versace} alt="versacelogo"/>
         <img className="zara h-[30px] w-[76px] " src={Zara} alt="zaralogo"/>

@@ -6,7 +6,8 @@ module.exports = {
       screens: {
         'max-sm': {'max': '480px'},
       },
-      color: {
+      colors: {
+        lightGrey:"#00000099",
         grey: "#A4A1AA",
          buttonColor: "#131118",
       },
