@@ -12,6 +12,7 @@ const NewArrival = () => {
         </h1>
         <section className="grid">
           <div className="card flex gap-[2.70rem] ">
+          
             {NewArrivalData.cardsData.map((item, index) => (
               <ProductCard
                 key={index}
@@ -25,7 +26,7 @@ const NewArrival = () => {
 
           <button
             type="button"
-            className="btn bg-[#ebe6de] rounded-full w-[218px] h-[34px] text-black font-bold text-center ml-[34rem] mt-[3rem]"
+            className="btn bg-[#ebe6de] rounded-full w-[218px] h-[34px] text-black font-bold text-center ml-[35rem] mt-[3rem]"
           >
             View All
           </button>
