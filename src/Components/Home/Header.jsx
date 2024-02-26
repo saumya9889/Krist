@@ -10,7 +10,7 @@ import {
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMenuOpen, setisMenuOpen] = useState(false);
   const handleClose = () => {
     setIsVisible(false);
   };
@@ -19,26 +19,34 @@ const Header = () => {
     // setIsVisible(!isVisible);
     setIsVisible(true);
   };
-
+  console.log(isMenuOpen, "isMenuOpen");
   // for humburge menu
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const handleToggleMenu = () => {
+    setisMenuOpen(true);
   };
   return (
     <>
       <header>
         <nav className="container-wrapper">
-          <div className="content-wrappe m-auto h-[80px] place-items-center  grid md:grid-cols-[100px,823px,1fr]">
-            <div className="menu-toggle max-sm:block hidden" onClick={toggleMenu}>
-            <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
-            <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
-            <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
-          </div>
+          <div className="content-wrappe m-auto h-[80px] place-items-center max-sm:grid-cols-3  grid md:grid-cols-[100px,823px,1fr]">
+            <div
+              className="menu-toggle block sm:hidden"
+              onClick={handleToggleMenu}
+            >
+              <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
+              <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
+              <div className="w-[25px] text-black h-[3px] m-[5px 0] mt-[2px] bg-[#333]"></div>
+            </div>
 
             <figure className="logo w-full cursor-pointer max-sm:max-w-[100px]">
               <img src={Logo} className=" logos w-max h-max" alt="logo" />
             </figure>
-            <div className="menu">
+            {/* {isMenuOpen ? ( */}
+            <div
+              className={`${
+                isMenuOpen ? "block" : "hidden"
+              } menu-wrap absolute sm:relative  sm:block`}
+            >
               <ul className="menu-list flex items-center gap-8 max-sm:flex-wrap max-sm:gap-y-2 max:mt-3">
                 <li>
                   <a href="#home">Shop</a>
@@ -54,6 +62,9 @@ const Header = () => {
                 </li>
               </ul>
             </div>
+            {/* ) : (
+              ""
+            )} */}
             <div className="card-area   flex items-center gap-8 max-sm:flex-wrap max-sm:gap-y-2 max:mt-3">
               <div className="search-wrapper relative text-gray-500 focus-within:text-black">
                 <button
@@ -62,26 +73,6 @@ const Header = () => {
                 >
                   <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
                 </button>
-                {isVisible && (
-                  <div className="relative">
-                    <span className="absolute right-[317px] top-[-10px] text-black font-extrabold z-10 ">
-                      {" "}
-                      <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
-                    </span>
-
-                    <input
-                      className="search-input absolute bg-[#f2f0f1!important] top-[-10px] pl-[3rem!important]  right-[2.5rem]  w-[305px]"
-                      type="text"
-                      placeholder="Search For Products"
-                    />
-                    <button
-                      onClick={handleClose}
-                      className="search-close absolute top-[-10px] left-[-64px] text-black font-extrabold"
-                    >
-                      X
-                    </button>
-                  </div>
-                )}
               </div>
               <div className="cursor-pointer">
                 <FontAwesomeIcon icon={faShoppingCart} />
@@ -95,6 +86,28 @@ const Header = () => {
             </div>
           </div>
         </nav>
+        {isVisible && (
+          <div className="absolute top-[28px]  sm:right-[22.5rem] right-0 bottom-0 rounded-sm bg-[#f2f0f1] sm:w-[300px] w-[90%] mx-auto h-[40px]">
+            <div className="relative">
+              <span className="absolute   top-[1px] left-3  text-black font-extrabold z-10 ">
+                {" "}
+                <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
+              </span>
+
+              <input
+                className="search-input  bg-[#f2f0f1!important] rounded-sm   pl-[3rem!important]    w-full"
+                type="text"
+                placeholder="Search For Products"
+              />
+              <button
+                onClick={handleClose}
+                className="search-close absolute top-[1px] right-3   text-black font-extrabold"
+              >
+                X
+              </button>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );

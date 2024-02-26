@@ -11,7 +11,7 @@ const TopSelling = () => {
             {TopSellingData.mainTitle}
           </h1>
           <section className="grid">
-            <div className="card flex gap-[2.70rem] ">
+            <div className="card grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3  sm:grid-cols-2 grid-cols-1   gap-[2.70rem] ">
               {TopSellingData.cardsData.map((item, index) => (
                 <ProductDataCard
                   key={index}
