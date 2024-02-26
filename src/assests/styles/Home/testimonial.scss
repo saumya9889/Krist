@@ -1,0 +1,24 @@
+.react-multiple-carousel__arrow--right {
+    position: absolute;
+    background: white !important;
+
+    top: 0%;
+}
+
+.react-multiple-carousel__arrow--left {
+    position: absolute;
+    background: white !important;
+    top: 0%;
+}
+
+.react-multiple-carousel__arrow--right::before {
+    color: black !important;
+
+    font-weight: 700;
+}
+
+.react-multiple-carousel__arrow--left::before {
+    color: black !important;
+    left: 72rem;
+    font-weight: 700;
+}

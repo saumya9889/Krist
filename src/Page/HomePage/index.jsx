@@ -6,6 +6,9 @@ import NewArrival from '../../Components/Home/NewArrival';
 import  TopSelling  from '../../Components/Home/TopSelling';
 import DressCards from '../../Components/Home/DressCards';
 import Testimonial from '../../Components/Home/Testimonial';
+import AboutOffers from '../../Components/Home/aboutOffers';
+import Footer from '../../Components/Home/Footer';
+import FooterCard from '../../Components/Home/footerCard';
 
 
 const HomePage = () => {
@@ -18,7 +21,9 @@ const HomePage = () => {
       <TopSelling />
       <DressCards />
       <Testimonial />
-      
+      <AboutOffers />
+      <Footer />    
+      <FooterCard />  
     </div>
   );
 };

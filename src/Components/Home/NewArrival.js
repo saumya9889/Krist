@@ -1,6 +1,8 @@
 import React from "react";
 import { ProductCard } from "../Common/product-card";
 import { NewArrivalData } from "../../Mock/home-data";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const NewArrival = () => {
   console.log(NewArrivalData, "NewArrivalData");
@@ -12,7 +14,6 @@ const NewArrival = () => {
         </h1>
         <section className="grid">
           <div className="card flex gap-[2.70rem] ">
-          
             {NewArrivalData.cardsData.map((item, index) => (
               <ProductCard
                 key={index}

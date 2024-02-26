@@ -6,6 +6,9 @@ module.exports = {
       screens: {
         'max-sm': {'max': '480px'},
       },
+      fontFamily: {
+        'auto': 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      },
       colors: {
         lightGrey:"#00000099",
         grey: "#A4A1AA",

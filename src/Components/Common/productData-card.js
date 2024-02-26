@@ -7,7 +7,7 @@ export const ProductDataCard = ({ title, src, price, reviewIcons }) => {
       <figure className="w-[230px]">
         <img className="image w-[280px] rounded-[20px]" src={src} alt={title} />
       </figure>
-      <h2 className="leading-8 text-[16px] font-bold  mt-4">
+      <h2 className="leading-8 text-[16px] font-sans font-bold  mt-4">
         {title ? title : "title"}
       </h2>
 

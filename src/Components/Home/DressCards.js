@@ -10,7 +10,7 @@ const DressCards = () => {
       <div className="container-wrapper">
       <div className="content-wrapper bg-[#f2f0f1] pt-8 mt-8 h-[880px] rounded-[40px]">
         <div className="text-center">
-          <h1 className="text-center text-3xl font-bold mt-12 mb-12">
+          <h1 className="text-center text-3xl font-extrabold font-sans mt-12 mb-12">
           BROWSE BY DRESS STYLE
           </h1>
         </div>

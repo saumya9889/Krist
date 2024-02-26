@@ -4,20 +4,20 @@ import Logo from "../../assests/image/logo.png";
 import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
-  const initialValue ={
+  const initialValue = {
     email: "",
     password: "",
-    rememberMe: false, 
+    rememberMe: false,
     //YHA PE MULTIPLE INPUTS NAME/VALUE LIKH SKTE H
-  }
-  const [userData, setUserData]= useState("");
-  const [formData, setFormData] = useState(initialValue);   //hum chahe to initial data yha v likh skte h as a object{}
-     
-  const email= "sam@gmail.com";
-  const password= "123456";
+  };
+  const [userData, setUserData] = useState("");
+  const [formData, setFormData] = useState(initialValue); //hum chahe to initial data yha v likh skte h as a object{}
+
+  const email = "sam@gmail.com";
+  const password = "123456";
   const handleChange = (e) => {
     const { name, value } = e.target;
- // console.log(value,"value====++")
+    // console.log(value,"value====++")
     setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
   };
   // console.log(formData, "formData");
@@ -28,21 +28,17 @@ const Login = () => {
     e.preventDefault();
     setUserData(formData); //ye form ke input field ko store krne k liye hai
     setFormData(initialValue); //ye form ke input field ko clear krne k liye hai or isme hm initial value use ki jo upr useState me use ki h
-    
+
     // debugger //for debugging purpose line ly line check krega code
 
-    if(
-      formData.email === email &&
-      formData.password === password
-     ) {
-       localStorage.setItem('isLoggedIn', 'true');
-        navigate("/home", { replace: true });
-     } else {
-       alert("Please enter correct username and password!");
-     }
-    
+    if (formData.email === email && formData.password === password) {
+      localStorage.setItem("isLoggedIn", "true");
+      navigate("/home", { replace: true });
+    } else {
+      alert("Please enter correct username and password!");
+    }
   };
-  console.log(userData,"userdata===");
+  console.log(userData, "userdata===");
 
   const handleForgotPassword = (e) => {
     alert("Forgot Password?");
@@ -163,36 +159,33 @@ const Login = () => {
 
 export default Login;
 
-
 // function to handle login form submission
-  // const handleChangeEmail = (e) => {
-  //   setEmail(e.target.value);
-  //   // console.log(e.target.value)
-  // };
+// const handleChangeEmail = (e) => {
+//   setEmail(e.target.value);
+//   // console.log(e.target.value)
+// };
 
-  // const handleChangePass = (e) => {
-  //   setPassword(e.target.value);
-  // };
+// const handleChangePass = (e) => {
+//   setPassword(e.target.value);
+// };
 
-  //  function for handle remember me checkbox
-  // const handleRememberMe = () => {
-  //   // we can add logic to handle the "Forgot Password?" action
-  //   // and we could show a modal or navigate to a password recovery page
-  //   setRememberMe(!rememberMe);
-  // };
+//  function for handle remember me checkbox
+// const handleRememberMe = () => {
+//   // we can add logic to handle the "Forgot Password?" action
+//   // and we could show a modal or navigate to a password recovery page
+//   setRememberMe(!rememberMe);
+// };
 
-  // function for handle forgot password click work
+// function for handle forgot password click work
 
-
-
-  // //  function for Forgot pass otp request
-  // const handleForgotPassword = async () => {
-  //   try {
-  //     // Send a request to your backend endpoint to send the OTP
-  //     const response = await axios.post("/api/forgotPassword", { email });
-  //     console.log(response.data); // Log the response from the backend
-  //     setOtpSent(true);
-  //   } catch (error) {
-  //     console.error("Error sending OTP:", error);
-  //   }
-  // };
+// //  function for Forgot pass otp request
+// const handleForgotPassword = async () => {
+//   try {
+//     // Send a request to your backend endpoint to send the OTP
+//     const response = await axios.post("/api/forgotPassword", { email });
+//     console.log(response.data); // Log the response from the backend
+//     setOtpSent(true);
+//   } catch (error) {
+//     console.error("Error sending OTP:", error);
+//   }
+// };

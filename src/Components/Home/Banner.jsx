@@ -2,7 +2,7 @@ import React from "react";
 import Banners from "../../assests/image/banner.png";
 import Vector from "../../assests/image/vector.png";
 import Vectors from "../../assests/image/vector-small.png";
-import { BannerData, NewArrivalData } from "../../Mock/home-data";
+// import { BannerData, NewArrivalData } from "../../Mock/home-data";
 
 const Banner = () => {
   return (
@@ -12,7 +12,7 @@ const Banner = () => {
           <div className="banner-content-wrapper flex justify-between items-center">
             <div className="left-side">
               <div className="letf-content-wrapper -mt-40">
-                <h1 className="heading font-[mono] leading-[60px] text-[47px] font-extrabold">
+                <h1 className="heading font-sans leading-[60px] text-[47px] font-extrabold">
                   FIND CLOTHES <br /> THAT
                   MATCHES <br /> YOUR STYLE
                 </h1>
@@ -36,21 +36,21 @@ const Banner = () => {
                   Shop Now
                 </button>
                 <div className="flex justify-between mt-14 ">
-                  <span className="span text-[34px] text-black font-bold leading-[54px]">
+                  <span className="span text-[34px] text-black font-sans font-bold leading-[54px]">
                     200+
-                    <p className="text-[16px] text-lightGrey leading-6 font-normal mt-2">
+                    <p className="text-[16px] text-lightGrey font-sans leading-6 font-normal mt-2">
                       International Brands
                     </p>
                   </span>
-                  <span className="span text-[34px] ] text-black font-bold leading-[54px">
+                  <span className="span text-[34px] ] text-black font-sans font-bold leading-[54px">
                     2,000+
-                    <p className="text-[16px] text-lightGrey leading-6 font-normal mt-2">
+                    <p className="text-[16px] text-lightGrey font-sans leading-6 font-normal mt-2">
                       High-Quality Products
                     </p>
                   </span>
-                  <span className="span  text-[34px] text-black font-bold leading-[54px]">
+                  <span className="span  text-[34px] text-black font-sans font-bold leading-[54px]">
                     30,000+
-                    <p className="text-[16px] text-lightGrey leading-6 font-normal mt-2">
+                    <p className="text-[16px] text-lightGrey font-sans leading-6 font-normal mt-2">
                       Happy Customers
                     </p>
                   </span>
