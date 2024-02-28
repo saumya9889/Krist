@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&family=Poppins&display=swap');
 @import "./login.scss";
+@import "./signup.scss";
+@import "../styles/Home/header.scss";
+@import "../styles/Home/banner.scss";
+@import "../styles/Home/companyBar.scss";
+@import "../styles/Home/testimonial.scss";
 
-.container {
-    * {
-        margin: 0 auto;
-        padding: 0;
-        box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-wrapper{
+    margin: 0 auto;
+    width: 1350px;
+    @media screen and (max-width: 1024px){
+        width: 90%;
     }
 }
+
 
 //tailwind
 

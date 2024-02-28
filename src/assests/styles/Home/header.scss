@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    font-style: Satoshi;
+}
+
+.card-area{
+    position: relative;
+.search-wrapper {
+    width: 100%;
+    right: 5.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+    // .search-container {
+        // position: relative;
+    // }
+
+    .search-input {
+        border-radius: 62px;
+        border: 1px solid #ccc;    transform: translateY(-6px);
+        height: 32px;
+        // width: 162%;
+        border: black;
+        background-color: #6b6464;
+        display: block;
+        padding: 4px;
+        border: 1px solid #ccc;
+        border-radius: 28px;
+    
+
+    }
+}
+}

@@ -1,14 +1,15 @@
-// *{
-//     margin: 0 auto;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+* {
+  // margin: 0 auto;
+  // padding: 0;
+  // box-sizing: border-box;
+  font-family: jost;
+}
 
-@mixin flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
 }
 
 .login-page {
@@ -17,12 +18,11 @@
   justify-content: center;
   grid-gap: 2rem;
   overflow-y: hidden;
-  // width: 1440px;
-  // height: 1024px;
 
   .right-side {
-    margin: 12rem;
-    padding: 2rem;
+
+    // margin: 12rem;
+    // padding: 2rem;
     h1 {
       font-family: "jost";
       font-style: bold;
@@ -31,47 +31,55 @@
       line-height: 24px;
       color: #080808;
     }
+
     h5 {
       font-size: 14px;
-      padding: 3px 0 18px 0;
+      padding: 5px 0 18px 0;
     }
+
     .input-wrapper label {
       padding: 0 0 5px;
       font-size: 12px;
+      font-weight: 500;
     }
 
-    .input{
+    .input {
       border-radius: 6px;
       border: 1px solid rgb(19, 17, 24);
       width: 308px;
-      height: 1.8rem;
+      height: 2rem;
     }
-
 
     .forgot-pass {
       @include flex;
-      justify-content: space-between; 
-      padding-top: 20px;
+      justify-content: space-between;
+      padding-top: 8px;
       gap: 20px;
-       .remember{
-        width: 100%;
+
+      .remember {
+        width: 58%;
         display: grid;
         grid-template-columns: 22px max-content;
-        gap: 8px;
+        gap: 10px;
         align-items: center;
-        font-size: 12px; 
-        input{
-            width:22px;
+        font-size: 13px;
+        font-weight: 500;
+
+        input {
+          width: 22px;
         }
-      .forgot h6{
-       font-size: 14px;
       }
     }
+
+    .button {
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 10px;
+      border: 1px solid rgb(19, 17, 24);
+      width: 308px;
+      height: 2rem;
+      font-family: "jost";
+      background-color: rgb(19, 17, 24);
     }
   }
 }
-
-// border-radius: 10px;
-// border: 1px solid rgb(19, 17, 24);
-// width: 320px;
-// height: 32px;
