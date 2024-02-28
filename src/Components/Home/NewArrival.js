@@ -5,10 +5,31 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const responsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
-  tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
-  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 5,
+    slidesToSlide: 1 // optional, default to 1.
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 3 // optional, default to 1.
+  },
+  mobile: {
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 1 // optional, default to 1.
+  }
+};
+
+const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+  const { carouselState: { currentSlide } } = rest;
+  return (
+    <div className="carousel-button-group flex gap-2">  
+      <button className={`${currentSlide === 0 ? 'bg-[#999!important]' : ''} w-10 h-5 shadow-sm bg-[#33333383]`} onClick={() => previous()}>{"<"}</button>
+      <button  className={`${currentSlide === 0 ? 'bg-[#999!important]' : ''} w-10 h-5 shadow-sm bg-[#33333383] `} onClick={() => next()} >{">"}</button> 
+    </div>
+  );
 };
 
 const NewArrival = () => {
@@ -21,7 +42,7 @@ const NewArrival = () => {
         </h1>
         <section className="grid">
           {/* <div className="card grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3   sm:grid-cols-2 grid-cols-1  gap-[2.70rem] "> */}
-          <Carousel responsive={responsive} >
+          <Carousel renderButtonGroupOutside={true} responsive={responsive} arrows={false} customButtonGroup={<ButtonGroup />}>
             {NewArrivalData.cardsData.map((item, index) => (
               <ProductCard
                 key={index}

@@ -45,6 +45,20 @@ export const NewArrivalData = {
       price: "$200",
       id: 4,
     },
+    {
+      img: require("../assests/image/cardImage/T-shirt.png"),
+      reviewIcons: "* * * ",
+      title: "SLEEVE STRIPED T-SHIRT",
+      price: "$200",
+      id: 4,
+    },
+    {
+      img: require("../assests/image/cardImage/image 7 (1).png"),
+      reviewIcons: 2,
+      title: "VERTICAL STRIPED SHIRT",
+      price: "$240",
+      id: 3,
+    },
   ],
 };
 
