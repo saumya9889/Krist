@@ -1,8 +1,15 @@
 import React from "react";
 import { ProductCard } from "../Common/product-card";
 import { NewArrivalData } from "../../Mock/home-data";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+  tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
+};
 
 const NewArrival = () => {
   console.log(NewArrivalData, "NewArrivalData");
@@ -13,7 +20,8 @@ const NewArrival = () => {
           {NewArrivalData.mainTitle}
         </h1>
         <section className="grid">
-          <div className="card grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3   sm:grid-cols-2 grid-cols-1  gap-[2.70rem] ">
+          {/* <div className="card grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3   sm:grid-cols-2 grid-cols-1  gap-[2.70rem] "> */}
+          <Carousel responsive={responsive} >
             {NewArrivalData.cardsData.map((item, index) => (
               <ProductCard
                 key={index}
@@ -22,8 +30,8 @@ const NewArrival = () => {
                 reviewIcons={item.reviewIcons}
                 price={item.price}
               />
-            ))}
-          </div>
+            ))}</Carousel>
+          {/* </div> */}
 
           <button
             type="button"

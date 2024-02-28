@@ -49,7 +49,7 @@ const Header = () => {
             >
               <ul className="menu-list flex items-center gap-8 max-sm:flex-wrap max-sm:gap-y-2 max:mt-3">
                 <li>
-                  <a href="#home">Shop</a>
+                  <Link to="/productdetail">Shop</Link>
                 </li>
                 <li>
                   <a href="#shop">On Sales</a>
@@ -87,21 +87,21 @@ const Header = () => {
           </div>
         </nav>
         {isVisible && (
-          <div className="absolute top-[28px]  sm:right-[22.5rem] right-0 bottom-0 rounded-sm bg-[#f2f0f1] sm:w-[300px] w-[90%] mx-auto h-[40px]">
+          <div className="absolute top-[28px] sm:right-[22.5rem]  right-0 bottom-0 rounded-[60px] bg-[#f2f0f1] sm:w-[300px] w-[90%] mx-auto h-[34px]">
             <div className="relative">
-              <span className="absolute   top-[1px] left-3  text-black font-extrabold z-10 ">
+              <span className="absolute top-[7px] left-3  text-black font-extrabold z-10 ">
                 {" "}
                 <FontAwesomeIcon icon={faMagnifyingGlass} size="lg" />
               </span>
 
               <input
-                className="search-input  bg-[#f2f0f1!important] rounded-sm   pl-[3rem!important]    w-full"
+                className="search-input bg-[#f2f0f1!important] rounded-[50px] h-[35px]   pl-[3rem!important]    w-full"
                 type="text"
                 placeholder="Search For Products"
               />
               <button
                 onClick={handleClose}
-                className="search-close absolute top-[1px] right-3   text-black font-extrabold"
+                className="search-close absolute top-[7px] right-3   text-black font-extrabold"
               >
                 X
               </button>

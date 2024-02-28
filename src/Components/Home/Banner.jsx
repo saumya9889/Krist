@@ -12,7 +12,7 @@ const Banner = () => {
           <div className="banner-content-wrapper grid md:grid-cols-2 grid-cols-1 lg justify-between items-center">
             <div className="left-side">
               <div className="letf-content-wrapper ">
-                <h1 className="heading font-sans leading-[60px] text-[47px] xl:text-[red] lg:text-green-600 text-yellow-300   font-extrabold">
+                <h1 className="heading font-sans leading-[60px] text-[47px] xl:text-[red] lg:text-green-600  font-extrabold">
                   FIND CLOTHES <br /> THAT
                   MATCHES <br /> YOUR STYLE
                 </h1>
