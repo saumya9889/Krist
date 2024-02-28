@@ -33,9 +33,9 @@ const Login = () => {
 
     if (formData.email === email && formData.password === password) {
       localStorage.setItem("isLoggedIn", "true");
-      navigate("/home", { replace: true });
+      navigate("/", { replace: true });
     } else {
-      alert("Please enter correct username and password!");
+      alert("Please enter correct username and password! email:sam@gmail.com , password: 123456");
     }
   };
   console.log(userData, "userdata===");

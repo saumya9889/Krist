@@ -9,12 +9,12 @@ import Testimonial from '../../Components/Home/Testimonial';
 import AboutOffers from '../../Components/Home/aboutOffers';
 import Footer from '../../Components/Home/Footer';
 import FooterCard from '../../Components/Home/footerCard';
+import { Layout } from '../../Components/Common/defaultHeader-layout';
 
 
 const HomePage = () => {
   return (
-    <div>
-      <Header />
+    <Layout> 
       <Banner />
       <CompanyBar />
       <NewArrival />
@@ -24,7 +24,8 @@ const HomePage = () => {
       <AboutOffers />
       <Footer />    
       <FooterCard />  
-    </div>
+      
+    </Layout>
   );
 };
 
