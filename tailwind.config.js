@@ -18,6 +18,8 @@ module.exports = {
         '4max': 'repeat(4, max-content)',
         '3max': 'repeat(3, max-content)',
         '2max': 'repeat(2, max-content)',
+        '175px-1fr': '175px 1fr',
+        '250px-1fr': '250px 1fr',
       },
     },
   },
