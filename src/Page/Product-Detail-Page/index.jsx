@@ -14,6 +14,31 @@ import Btshirtb from "../../assests/image/pdp/btshirtback.jpg";
 import BtshirtF from "../../assests/image/pdp/btshirts.jpg";
 import { StarIcon } from "../../Mock/icons";
 import { ProductDetailPage } from "../../Mock/product-detail-page";
+import Slider from "react-slick"
+
+var settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  vertical: true,
+  verticalSwiping: true,
+  // adaptiveHeight: true,
+  variableHeight: false,
+  cssEase: 'linear',
+  scrollbar: false,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: true
+      }
+    }
+  ]
+};
 
 const ProductDetail = () => {
   // const [count, setCount] = useState(1);
@@ -111,6 +136,7 @@ const ProductDetail = () => {
           <div className="product-detail-wrapper">
             <div className="product-detail-breadcrumb ">
               <ul className="grid grid-flow-col w-max gap-1 text-[16px] text-grey">
+             
                 <div className="grid w-max grid-cols-[max-content,10px] items-center gap-2">
                   <li className="">Home</li>{" "}
                   <span className="flex items-center">
@@ -143,18 +169,19 @@ const ProductDetail = () => {
                 </div>
                 <div>
                   <li>Tshirts</li>
-                </div>
+                </div> 
               </ul>
             </div>
             <div className="product-details grid grid-cols-2 gap-2 mt-12">
               <div className="left-side grid grid-flow-col gap-2">
-                <div className="left-side-wrapper grid grid-cols-175px-1fr ">
-                  <div className="grid grid-flow-row gap-[6px] w-[100%] h-[calc(40%-20px)] overflow-y-auto">
+                <div className="left-side-wrapper grid grid-cols-[100px,1fr] ">
+                  {/* <div className="grid grid-flow-row gap-[6px] w-[100%] h-[calc(40%-20px)] overflow-y-auto"> */}
+                  <Slider {...settings}>
                     {(filteredData.length === 0 ? imgs : filteredData).map(
                       (item, index) => (
                         <figure
                           key={index}
-                          className="w-[140px]"
+                          className="w-[100px] overflow-hidden h-[100px] mb-4 block"
                           onClick={() => handleSideImageClick(item)}
                         >
                           <img
@@ -163,12 +190,14 @@ const ProductDetail = () => {
                                 ? item.image
                                 : item.image
                             }
+                            className="h-[100%] w-max"
                             alt={`Image ${index + 1}`}
                           />
                         </figure>
                       )
                     )}
-                  </div>
+                    </Slider>
+                  {/* </div> */}
                   <div className="side-img">
                     <figure>
                       {/* Display selected image based on selectedImage state */}

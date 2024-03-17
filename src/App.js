@@ -4,6 +4,8 @@ import Login from "./Page/login";
 import SignUp from "./Page/sign-up";
 import HomePage from "./Page/HomePage";
 import ProductDetail from "./Page/Product-Detail-Page";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 // import Header from "./Components/Home/Header";
 

@@ -12,10 +12,11 @@
     box-sizing: border-box;
 }
 
-.container-wrapper{
+.container-wrapper {
     margin: 0 auto;
     width: 1350px;
-    @media screen and (max-width: 1024px){
+
+    @media screen and (max-width: 1024px) {
         width: 90%;
     }
 }
@@ -26,3 +27,15 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+.slick-slider { 
+    .slick-arrow { 
+        &.slick-prev {
+            background: green !important;
+        }
+        &.slick-next {
+            background: green !important;
+        }
+    }
+}
