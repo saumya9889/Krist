@@ -14,8 +14,7 @@ export const ProductDataCard = ({ title, src, price, reviewIcons }) => {
       <h3 className="star-icon w-[95px] text-[22px]">
         {/* {reviewIcons ? reviewIcons : "*"}
          */}
-         <StarIcon number={reviewIcons} className={"text-[#ffc633] "}/>
-
+        <StarIcon number={reviewIcons} className={"text-[#ffc633] "} />
       </h3>
       <h5 className="price text-[20px] font-[700] leading-9">
         {price ? price : "price"}
